@@ -1,0 +1,55 @@
+plugins {
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+version = '0.0.1-SNAPSHOT'
+group = 'crfa.app'
+
+repositories {
+    maven { url 'https://repo.spring.io/release' }
+    mavenCentral()
+    mavenLocal()
+}
+
+sourceCompatibility = '17'
+
+description = 'Cardano Java Starter Kit'
+
+dependencies {
+    implementation 'org.springframework.shell:spring-shell-starter:3.0.1'
+    implementation platform('org.springframework.boot:spring-boot-dependencies:3.0.1')
+
+    implementation 'com.bloxbean.cardano:cardano-client-lib:0.4.3'
+    implementation 'com.bloxbean.cardano:cardano-client-backend-blockfrost:0.4.3'
+    implementation 'com.bloxbean.cardano:cardano-client-backend-koios:0.4.3'
+
+    implementation 'com.bloxbean.cardano:aiken-java-binding:0.0.3'
+
+    implementation("io.blockfrost:blockfrost-java:0.1.3")
+
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'org.apache.commons:commons-text:1.9'
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+ext {
+    set('springShellVersion', "3.0.1")
+}
+
+springBoot {
+    buildInfo()
+}
