@@ -25,13 +25,13 @@ description = 'Cardano Java Starter Kit'
 
 dependencies {
     implementation 'org.springframework.shell:spring-shell-starter:3.0.1'
-    implementation platform('org.springframework.boot:spring-boot-dependencies:3.0.1')
+    implementation platform('org.springframework.boot:spring-boot-dependencies:3.0.5')
 
     implementation 'com.bloxbean.cardano:cardano-client-lib:0.4.3'
     implementation 'com.bloxbean.cardano:cardano-client-backend-blockfrost:0.4.3'
     implementation 'com.bloxbean.cardano:cardano-client-backend-koios:0.4.3'
 
-    implementation 'com.bloxbean.cardano:aiken-java-binding:0.0.3'
+    implementation 'com.bloxbean.cardano:aiken-java-binding:0.0.5'
 
     implementation("io.blockfrost:blockfrost-java:0.1.3")
 
